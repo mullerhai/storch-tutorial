@@ -1,25 +1,29 @@
 package torch.basic
 
-//import spire.random.Random
-
 import org.bytedeco.javacpp.{FloatPointer, PointerScope}
-import org.bytedeco.pytorch.{OutputArchive, TensorExampleVectorIterator}
+import org.bytedeco.pytorch.{ChunkDatasetOptions, Example, ExampleIterator, ExampleStack, ExampleVector, OutputArchive, TensorExampleVectorIterator}
 import torch.*
-import torch.Device.{CPU, CUDA}
-import torch.data.dataset.ChunkSharedBatchDataset
-import torch.nn.functional as F
-import torch.nn.modules.HasParams
-import torch.optim.Adam
-import torchvision.datasets.FashionMNIST
 
 import java.nio.file.Paths
-//import torchvision.datasets.FashionMNIST
-
-import java.nio.file.Paths
-//import scala.runtime.stdLibPatches.Predef.nn
+import torch.nn
 import torch.internal.NativeConverters.{fromNative, toNative}
 
 import scala.util.{Random, Using}
+import torch.Device.{CPU, CUDA}
+import torch.utils.data.DataLoaderOptions
+import torch.utils.data.dataloader.ChunkRandomDataLoader
+import torch.utils.data.datareader.ChunkDataReader
+import torch.utils.data.dataset.ChunkDataset
+import torch.utils.data.dataset.chunk.ChunkSharedBatchDataset
+import torch.nn.functional as F
+import torch.nn.modules.HasParams
+import torch.optim.Adam
+import torch.utils.data.dataset.custom.FashionMNIST
+import torch.utils.data.sampler.RandomSampler
+
+import java.nio.file.Paths
+//import org.bytedeco.pytorch.{ChunkDatasetOptions, Example, ExampleIterator, ExampleStack, ExampleVector, ExampleVectorIterator, JavaDataset, JavaDistributedRandomTensorDataLoader, JavaDistributedSequentialTensorDataLoader, JavaRandomDataLoader, JavaRandomTensorDataLoader, JavaSequentialTensorDataLoader, JavaStatefulDataset, JavaStreamDataLoader, RandomSampler, SizeTArrayRef, SizeTOptional, TensorExample, TensorExampleIterator, TensorExampleStack, TensorExampleVector, AbstractTensor as Tensor, ChunkDataReader as CDR, ChunkDataset as CD, ChunkRandomDataLoader as CRDL, ChunkSharedBatchDataset as CSBD, DataLoaderOptions as DLO, DistributedRandomSampler as DRS, DistributedSequentialSampler as DSS, JavaStreamDataset as JSD, JavaTensorDataset as TD, StreamSampler as STS}
+
 
 object logisticRegression03 extends App {
 
@@ -49,14 +53,7 @@ object logisticRegression03 extends App {
     val criterion = nn.loss.CrossEntropyLoss()
     val optimizer = torch.optim.SGD(model.parameters(true), lr = learning_rate)
 
-    import org.bytedeco.pytorch.{ChunkDatasetOptions, Example, ExampleIterator, ExampleStack, ExampleVector, ExampleVectorIterator, JavaDataset, JavaDistributedRandomTensorDataLoader, JavaDistributedSequentialTensorDataLoader, JavaRandomDataLoader, JavaRandomTensorDataLoader, JavaSequentialTensorDataLoader, JavaStatefulDataset, JavaStreamDataLoader, RandomSampler, SizeTArrayRef, SizeTOptional, TensorExample, TensorExampleIterator, TensorExampleStack, TensorExampleVector, AbstractTensor as Tensor, ChunkDataReader as CDR, ChunkDataset as CD, ChunkRandomDataLoader as CRDL, ChunkSharedBatchDataset as CSBD, DataLoaderOptions as DLO, DistributedRandomSampler as DRS, DistributedSequentialSampler as DSS, JavaStreamDataset as JSD, JavaTensorDataset as TD, StreamSampler as STS}
-    import torch.data.DataLoaderOptions
-    import torch.data.dataloader.*
-    import torch.data.datareader.{ChunkDataReader, ChunkTensorDataReader, ExampleVectorReader, TensorExampleVectorReader}
-    import torch.data.dataset.*
-    import torch.data.dataset.java.{StatefulDataset, StatefulTensorDataset, StreamDataset, StreamTensorDataset, TensorDataset, JavaDataset as JD}
-    import torch.data.sampler.{DistributedRandomSampler, DistributedSequentialSampler, StreamSampler, RandomSampler as RS, SequentialSampler as SS}
-
+ 
     def exampleVectorToExample(exVec: ExampleVector): Example = {
       val example = new Example(exVec.get(0).data(), exVec.get(0).target())
       example
@@ -85,7 +82,7 @@ object logisticRegression03 extends App {
     opts.batch_size.put(100)
     //  opts.enforce_ordering.put(true)
     //  opts.drop_last.put(false)
-    val data_loader = new ChunkRandomDataLoader(ds, opts)
+    val data_loader = new ChunkRandomDataLoader(ds, batch_size)
     val total_step = train_dataset.length // 2000 //data_loader //
     (1 to num_epochs).foreach(epoch => {
       var it: ExampleIterator = data_loader.begin

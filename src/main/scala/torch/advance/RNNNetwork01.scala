@@ -4,19 +4,25 @@ package advance
 import org.bytedeco.javacpp.{FloatPointer, PointerScope}
 import org.bytedeco.pytorch.{OutputArchive, TensorExampleVectorIterator}
 import torch.Device.{CPU, CUDA}
+import torch.utils.data.DataLoaderOptions
+import torch.utils.data.dataloader.ChunkRandomDataLoader
+import torch.utils.data.datareader.ChunkDataReader
+import torch.utils.data.dataset.ChunkDataset
+import torch.utils.data.dataset.chunk.ChunkSharedBatchDataset
 import torch.{FloatNN, *}
-import torch.data.DataLoaderOptions
-import torch.data.dataloader.*
-import torch.data.datareader.{ChunkDataReader, ChunkTensorDataReader, ExampleVectorReader, TensorExampleVectorReader}
+//import torch.data.DataLoaderOptions
+//import torch.data.dataloader.*
+//import torch.data.datareader.{ChunkDataReader, ChunkTensorDataReader, ExampleVectorReader, TensorExampleVectorReader}
+import torch.nn as nn
 import torch.nn.functional as F
 import torch.nn.modules.HasParams
 import torch.optim.Adam
-import torchvision.datasets.FashionMNIST
-
+import torch.utils.data.dataset.custom.FashionMNIST
 import java.nio.file.Paths
-import torch.data.dataset.*
-import torch.data.dataset.java.{StatefulDataset, StatefulTensorDataset, StreamDataset, StreamTensorDataset, TensorDataset, JavaDataset as JD}
-import torch.data.sampler.{DistributedRandomSampler, DistributedSequentialSampler, StreamSampler, RandomSampler as RS, SequentialSampler as SS}
+//import torch.data.dataset.*
+//import torch.data.dataset.java.{StatefulDataset, StatefulTensorDataset, StreamDataset, StreamTensorDataset, TensorDataset, JavaDataset as JD}
+//import torch.data.sampler.{DistributedRandomSampler, DistributedSequentialSampler, StreamSampler, RandomSampler as RS, SequentialSampler as SS}
+
 import torch.internal.NativeConverters.fromNative
 
 import scala.util.{Random, Using}
@@ -50,7 +56,7 @@ class RNNNetwork[D <: FloatNN : Default](input_size: Int, hidden_size: Int, num_
 }
 
 object RNNNetwork01 extends App {
-  @main
+//  @main
   def main(): Unit = {
 
     val device = if torch.cuda.isAvailable then CUDA else CPU
@@ -108,7 +114,7 @@ object RNNNetwork01 extends App {
     opts.batch_size.put(100)
     //  opts.enforce_ordering.put(true)
     //  opts.drop_last.put(false)
-    val data_loader = new ChunkRandomDataLoader(ds, opts)
+    val data_loader = new ChunkRandomDataLoader(ds, batch_size)
     val total_step: Int = 2000 // train_dataset.length // 2000 //data_loader //
     (1 to num_epochs).foreach(epoch => {
       var it: ExampleIterator = data_loader.begin

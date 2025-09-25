@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package torch.basic
+package torch.keystone
 
 import org.bytedeco.pytorch
 import torch.*
 import torch.Tensor.fromNative
-import torch.data.TensorDataset
+import torch.utils.data.NormalTensorDataset
 
 import java.net.URL
 import java.nio.file.{Files, Path}
@@ -33,7 +33,7 @@ trait MNISTBase(
                  val root: Path,
                  val train: Boolean,
                  val download: Boolean
-               ) extends TensorDataset[Float32, Int64] {
+               ) extends NormalTensorDataset[Float32, Int64] {
 
   private val mode =
     if train then pytorch.MNIST.Mode.kTrain.intern().value
@@ -57,7 +57,7 @@ trait MNISTBase(
   }
   private val native = pytorch.MNIST(root.toString(), mode)
   private val ds =
-    TensorDataset(
+    NormalTensorDataset(
       fromNative[Float32](native.images().clone()),
       fromNative[Int64](native.targets().clone())
     )

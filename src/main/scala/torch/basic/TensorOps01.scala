@@ -4,7 +4,7 @@ import org.bytedeco.javacpp.{FloatPointer, PointerScope}
 import org.bytedeco.pytorch.global.torch as torchNative
 import org.bytedeco.pytorch.{AbstractTensor, Node, OutputArchive, TensorExampleVectorIterator}
 import torch.Device.{CPU, CUDA}
-import torch.data.dataset.ChunkSharedBatchDataset
+//import torch.data.dataset.ChunkSharedBatchDataset
 import torch.nn
 import torch.nn.functional as F
 import torch.nn.modules.HasParams

@@ -5,21 +5,22 @@ import torch.FloatNN
 import torch.nn.modules.{HasParams, TensorModule}
 import org.bytedeco.pytorch.{OutputArchive, TensorExampleVectorIterator}
 import torch.Device.{CPU, CUDA}
-import torch.data.dataset.ChunkSharedBatchDataset
+//import torch.data.dataset.ChunkSharedBatchDataset
 import torch.nn.{Sequential, functional as F}
 import torch.nn.modules.HasParams
 import torch.optim.Adam
 import torch.*
-import torchvision.datasets.FashionMNIST
-
+import torch.nn as nn
+import torch.utils.data.dataset.custom.FashionMNIST
 import java.nio.file.Paths
 import scala.util.{Random, Using}
-import torch.data.DataLoaderOptions
-import torch.data.dataloader.*
-import torch.data.datareader.{ChunkDataReader, ChunkTensorDataReader, ExampleVectorReader, TensorExampleVectorReader}
-import torch.data.dataset.*
-import torch.data.dataset.java.{StatefulDataset, StatefulTensorDataset, StreamDataset, StreamTensorDataset, TensorDataset, JavaDataset as JD}
-import torch.data.sampler.{DistributedRandomSampler, DistributedSequentialSampler, StreamSampler, RandomSampler as RS, SequentialSampler as SS}
+//import torch.data.DataLoaderOptions
+//import torch.data.dataloader.*
+//import torch.data.datareader.{ChunkDataReader, ChunkTensorDataReader, ExampleVectorReader, TensorExampleVectorReader}
+//import torch.data.dataset.*
+//import torch.data.dataset.java.{StatefulDataset, StatefulTensorDataset, StreamDataset, StreamTensorDataset, TensorDataset, JavaDataset as JD}
+//import torch.data.sampler.{DistributedRandomSampler, DistributedSequentialSampler, StreamSampler, RandomSampler as RS, SequentialSampler as SS}
+
 import torch.internal.NativeConverters.fromNative
 import torch.nn.modules.conv.Conv2d
 

@@ -6,21 +6,20 @@ import torch.nn.modules.HasParams
 import org.bytedeco.javacpp.{FloatPointer, PointerScope}
 import org.bytedeco.pytorch.{OutputArchive, TensorExampleVectorIterator}
 import torch.Device.{CPU, CUDA}
-import torch.data.dataset.ChunkSharedBatchDataset
+//import torch.data.dataset.ChunkSharedBatchDataset
 import torch.nn.functional as F
 import torch.nn.modules.HasParams
 import torch.optim.Adam
 import torch.*
-import torchvision.datasets.FashionMNIST
+import torch.utils.data.dataset.custom.FashionMNIST
 
 import java.nio.file.Paths
 import scala.util.{Random, Using}
-import torch.data.DataLoaderOptions
-import torch.data.dataloader.*
-import torch.data.datareader.{ChunkDataReader, ChunkTensorDataReader, ExampleVectorReader, TensorExampleVectorReader}
-import torch.data.dataset.*
-import torch.data.dataset.java.{StatefulDataset, StatefulTensorDataset, StreamDataset, StreamTensorDataset, TensorDataset, JavaDataset as JD}
-import torch.data.sampler.{DistributedRandomSampler, DistributedSequentialSampler, StreamSampler, RandomSampler as RS, SequentialSampler as SS}
+//import torch.data.datareader.{ChunkDataReader, ChunkTensorDataReader, ExampleVectorReader, TensorExampleVectorReader}
+//import torch.data.dataset.*
+//import torch.data.dataset.java.{StatefulDataset, StatefulTensorDataset, StreamDataset, StreamTensorDataset, TensorDataset, JavaDataset as JD}
+//import torch.data.sampler.{DistributedRandomSampler, DistributedSequentialSampler, StreamSampler, RandomSampler as RS, SequentialSampler as SS}
+
 import torch.internal.NativeConverters.fromNative
 
 class ConvNet[D <: Float16 | Float32 | Float64  : Default](input_size: Int, hidden_size: Int, num_layers: Int, num_classes: Int = 10 ) extends HasParams[D]{
@@ -56,10 +55,10 @@ class ConvNet[D <: Float16 | Float32 | Float64  : Default](input_size: Int, hidd
     nn.Embedding(1,1),
     nn.EmbeddingBag(1,1),
     nn.InstanceNorm2d(1),
-    nn.SELU(1,true),
-    nn.CELU(1,0.1f, true),
+    nn.SELU(),
+    nn.CELU(),
     nn.Bilinear(1,1,1),
-    nn.Hardtanh(1,1f,1f),
+    nn.Hardtanh(0.0f,1.0f),
     nn.GRU(1,1,1),
     nn.RNN(1,1,1),
     nn.LSTM(1,1,1),

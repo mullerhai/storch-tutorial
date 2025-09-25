@@ -165,6 +165,7 @@ object TensorSliceOps01 {
     val aa = a.index_select(0, torch.tensor(Seq(0, 2))).shape
     println(s"aa shape ${aa} , torch.Size([2, 3, 28, 28])")
 
+    a.numpy()
     val b = a.index_select(1, torch.tensor(Seq(0, 2), requires_grad = false))
     println(s" b shape ${b.shape}, torch.Size([4, 2, 28, 28]) ")
     val c = a.index_select(2, torch.arange(0, 8)).shape
@@ -369,27 +370,27 @@ object TensorSliceOps01 {
     println(s"t4 ${t4}")
   }
 
-  @main
+//  @main
   def main(): Unit = {
-    randSelect034()
-    //    randSelect033()
-    //    randSelect03()
-    //    randSelect04()
-    //    randSelect05()
-    //    randSelect02()
-    //    randSelect01()
-    //    randSelect06()
-    //    indexSelectRows()
-    //    indexSelectColumns()
-    //    indexSelectColumnsTwo()
-    //    indexSelectColumnsThree()
-    //    indexSelectColumnsFour()
-    //    indexSelectRowsFour()
-    //    indexSelectColumnsFour2()
-    //    indexSelectRowsFifth()
-    //    indexSelectColumnsFifth()
-    //    indexUpdateColumnsSix()
-    //    indexUpdateRowsSix()
+        randSelect034()
+        randSelect033()
+        randSelect03()
+        randSelect04()
+        randSelect05()
+        randSelect02()
+        randSelect01()
+        randSelect06()
+        indexSelectRows()
+        indexSelectColumns()
+        indexSelectColumnsTwo()
+        indexSelectColumnsThree()
+        indexSelectColumnsFour()
+        indexSelectRowsFour()
+        indexSelectColumnsFour2()
+        indexSelectRowsFifth()
+        indexSelectColumnsFifth()
+        indexUpdateColumnsSix()
+        indexUpdateRowsSix()
 
     //    indexBackward()
   }

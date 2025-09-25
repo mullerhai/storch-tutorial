@@ -1,30 +1,31 @@
 package torch.basic
 
 import org.bytedeco.javacpp.{FloatPointer, PointerScope}
+import org.bytedeco.pytorch.{ChunkDatasetOptions, Example, ExampleIterator, ExampleStack, ExampleVector}
 import torch.*
 import torch.Device.{CPU, CUDA}
 import torch.nn.modules
 import torch.nn.modules.HasParams
-import torchvision.datasets.FashionMNIST
+import torch.utils.data.dataset.custom.FashionMNIST
 
 import java.nio.file.Paths
-//import torchvision.datasets.FashionMNIST
-//import scala.runtime.stdLibPatches.Predef.nn
 import torch.internal.NativeConverters.fromNative
+import torch.utils.data.DataLoaderOptions
+import torch.utils.data.dataloader.ChunkRandomDataLoader
+import torch.utils.data.datareader.ChunkDataReader
+import torch.utils.data.dataset.ChunkDataset
+import torch.utils.data.dataset.chunk.ChunkSharedBatchDataset
+import torch.utils.data.sampler.RandomSampler
 
 import scala.util.{Random, Using}
 
 class NeuralNet2[D <: FloatNN : Default](input_size: Int, hidden_size: Int, num_classes: Int) extends HasParams[D] {
-
   val fc1 = register(nn.Linear(input_size, hidden_size))
   val relu = register(nn.ReLU(true))
   val fc2 = register(nn.Linear(hidden_size, num_classes))
-
   def apply(input: Tensor[D]): Tensor[D] = {
-    val out = fc2(relu(fc1(input)))
-    out
+    fc2(relu(fc1(input)))
   }
-
 }
 
 object feedForwardNeuralNetwork {
@@ -60,9 +61,9 @@ object feedForwardNeuralNetwork {
 
     val model = NeuralNet[Float32](input_size, hidden_size, num_classes).to(device)
     val optimizer = torch.optim.SGD(model.parameters(true), lr = learning_rate)
-    import org.bytedeco.pytorch.*
-    import torch.data.DataLoaderOptions
-    import torch.data.datareader.ChunkDataReader
+//    import org.bytedeco.pytorch.*
+//    import torch.data.DataLoaderOptions
+//    import torch.data.datareader.ChunkDataReader
     def exampleVectorToExample(exVec: ExampleVector): Example = {
       val example = new Example(exVec.get(0).data(), exVec.get(0).target())
       example
@@ -91,7 +92,7 @@ object feedForwardNeuralNetwork {
     opts.batch_size.put(100)
     //  opts.enforce_ordering.put(true)
     //  opts.drop_last.put(false)
-    val data_loader = new ChunkRandomDataLoader(ds, opts)
+    val data_loader = new ChunkRandomDataLoader(ds, batch_size)
     val total_step = train_dataset.length // 2000 //data_loader //
     (1 to num_epochs).foreach(epoch => {
       var it: ExampleIterator = data_loader.begin

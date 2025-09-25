@@ -5,21 +5,13 @@ import org.bytedeco.javacpp.{FloatPointer, PointerScope}
 import org.bytedeco.pytorch.{OutputArchive, TensorExampleVectorIterator}
 import torch.Device.{CPU, CUDA}
 import torch.{FloatNN, *}
-import torch.data.DataLoaderOptions
-import torch.data.dataloader.*
-import torch.data.datareader.{ChunkDataReader, ChunkTensorDataReader, ExampleVectorReader, TensorExampleVectorReader}
+import torch.nn as nn
 import torch.nn.functional as F
 import torch.nn.modules.HasParams
 import torch.optim.Adam
-import torchvision.datasets.FashionMNIST
-
 import java.nio.file.Paths
-import torch.data.dataset.*
-import torch.data.dataset.java.{StatefulDataset, StatefulTensorDataset, StreamDataset, StreamTensorDataset, TensorDataset, JavaDataset as JD}
-import torch.data.sampler.{DistributedRandomSampler, DistributedSequentialSampler, StreamSampler, RandomSampler as RS, SequentialSampler as SS}
 import torch.internal.NativeConverters.fromNative
 import torch.nn.modules.conv.Conv2d
-
 import scala.util.{Random, Using}
 
 class VAEModel[D <: FloatNN : Default](image_size: Int = 784, h_dim: Int = 400, z_dim: Int = 20) extends HasParams[D] {

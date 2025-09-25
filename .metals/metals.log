@@ -1,0 +1,247 @@
+2025.05.14 08:27:23 INFO  Started: Metals version 1.5.3 in folders 'D:\data\git\storch-tutorial' for client Trae CN 1.98.2.
+2025.05.14 08:27:40 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\MNIST.scala. Using presentation compiler with project's scala-library version: 3.3.6
+5月 14, 2025 8:29:17 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "untitled:Untitled-1"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "untitled" not installed
+	at java.base/java.nio.file.Path.of(Path.java:213)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:787)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:784)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:774)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+2025.05.14 08:29:37 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 08:29:37 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 08:29:37 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 08:29:37 WARN  no build target for: D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala
+2025.05.14 08:29:37 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+5月 14, 2025 8:29:38 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10
+2025.05.14 08:29:37 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:03:08 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:03:21 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:04:04 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:04:26 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:04:40 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:07:27 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:11:33 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:11:37 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:11:40 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:11:55 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:11:58 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:12:29 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:12:31 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:13:01 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:52:06 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:52:24 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:53:27 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:53:31 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:53:34 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:54:08 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 11:54:15 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:09:11 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:09:11 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:09:36 WARN  no build target for: D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala
+2025.05.14 12:09:36 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:09:36 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+5月 14, 2025 12:09:36 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 148
+2025.05.14 12:09:36 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:17:00 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:18:28 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:18:33 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:18:33 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:18:35 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:18:35 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:23:33 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:33:26 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:47:51 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:49:06 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:50:04 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 12:50:57 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10.scala. Using presentation compiler with project's scala-library version: 3.3.6
+5月 14, 2025 1:29:48 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "untitled:Untitled-1"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "untitled" not installed
+	at java.base/java.nio.file.Path.of(Path.java:213)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:787)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:784)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:774)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+2025.05.14 13:29:57 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10Downloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 13:29:58 WARN  no build target for: D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10Downloader.scala
+2025.05.14 13:29:58 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10Downloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 13:29:57 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10Downloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+5月 14, 2025 1:29:58 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 191
+2025.05.14 13:29:57 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10Downloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 13:30:51 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10Downloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 13:31:47 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10Downloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 13:31:47 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10Downloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 13:39:19 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10Downloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+5月 14, 2025 1:40:54 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "untitled:Untitled-1"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "untitled" not installed
+	at java.base/java.nio.file.Path.of(Path.java:213)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:787)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:784)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:774)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+2025.05.14 13:41:15 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10DownloaderMu.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 13:41:15 WARN  no build target for: D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10DownloaderMu.scala
+2025.05.14 13:41:15 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10DownloaderMu.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 13:41:15 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10DownloaderMu.scala. Using presentation compiler with project's scala-library version: 3.3.6
+5月 14, 2025 1:41:16 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 213
+2025.05.14 13:41:45 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10DownloaderMu.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 13:42:41 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10DownloaderMu.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 14:02:33 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Cifar10DownloaderMu.scala. Using presentation compiler with project's scala-library version: 3.3.6
+5月 14, 2025 2:07:11 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "untitled:Untitled-1"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "untitled" not installed
+	at java.base/java.nio.file.Path.of(Path.java:213)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:787)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:784)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:774)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+2025.05.14 14:07:19 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 14:07:19 WARN  no build target for: D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala
+2025.05.14 14:07:19 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 14:07:19 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 14:07:19 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+5月 14, 2025 2:07:19 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 234
+2025.05.14 14:07:19 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 14:09:09 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 14:09:45 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 14:10:44 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 14:12:35 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 14:20:13 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.14 15:34:06 INFO  no build target found for D:\data\git\storch-tutorial\src\main\scala\torch\Flickr8kSingleDownloader.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2025.05.15 10:52:54 INFO  Started: Metals version 1.5.3 in folders 'D:\data\git\storch-tutorial' for client Trae CN 1.98.2.
+2025.05.16 08:54:04 INFO  Started: Metals version 1.5.3 in folders 'D:\data\git\storch-tutorial' for client Trae CN 1.98.2.
+2025.05.16 08:54:05 INFO  time: initialize in 0.11s
+5月 16, 2025 8:52:48 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.05.19 19:24:00 INFO  Started: Metals version 1.5.3 in folders 'D:\data\git\storch-tutorial' for client Trae CN 1.98.2.
+5月 20, 2025 12:40:18 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+5月 21, 2025 2:36:28 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+5月 21, 2025 2:37:14 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+5月 21, 2025 2:37:17 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.05.22 09:21:47 INFO  Started: Metals version 1.5.3 in folders 'D:\data\git\storch-tutorial' for client Trae CN 1.98.2.
+5月 22, 2025 4:43:54 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+5月 22, 2025 4:44:55 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+5月 22, 2025 4:44:55 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+5月 22, 2025 4:44:59 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+5月 25, 2025 2:33:11 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.05.26 09:49:55 INFO  Started: Metals version 1.5.3 in folders 'D:\data\git\storch-tutorial' for client Trae CN 1.98.2.
+2025.05.26 09:49:55 INFO  time: initialize in 0.24s
+5月 26, 2025 9:50:42 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.05.26 13:25:15 INFO  Started: Metals version 1.5.3 in folders 'D:\data\git\storch-tutorial' for client Trae CN 1.98.2.
+2025.06.09 21:53:37 INFO  Started: Metals version 1.5.3 in folders 'D:\data\git\storch-tutorial' for client Trae CN 1.98.2.
+2025.07.26 13:08:05 INFO  Started: Metals version 1.6.0 in folders 'D:\data\git\storch-tutorial' for client Trae CN 1.98.2.
+2025.07.26 13:08:05 INFO  time: initialize in 0.18s
+2025.07.30 07:58:44 INFO  Started: Metals version 1.6.0 in folders 'D:\data\git\storch-tutorial' for client Trae CN 1.98.2.

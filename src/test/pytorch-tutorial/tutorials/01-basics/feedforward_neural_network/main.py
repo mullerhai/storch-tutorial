@@ -46,9 +46,8 @@ class NeuralNet(nn.Module):
         out = self.fc1(x)
         out = self.relu(out)
         out = self.fc2(out)
+        out.grad.data
         return out
-
-
 model = NeuralNet(input_size, hidden_size, num_classes).to(device)
 
 # Loss and optimizer
